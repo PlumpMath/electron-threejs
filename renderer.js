@@ -1,8 +1,8 @@
 // This file is required by the index.html file and will
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
-var scene, camera, renderer;
-var geometry, material, mesh;
+let scene, camera, renderer;
+let geometry, material, mesh;
 
 init();
 animate();
@@ -15,7 +15,7 @@ function init() {
     camera.position.z = 1000;
 
     geometry = new THREE.BoxGeometry( 200, 200, 200 );
-    material = new THREE.MeshBasicMaterial( { color: 0xff0000, wireframe: true } );
+    material = new THREE.MeshBasicMaterial( { color: 0x0033cc, wireframe: true, wireframeLinewidth: 2 } );
 
     mesh = new THREE.Mesh( geometry, material );
     scene.add( mesh );
@@ -36,4 +36,4 @@ function animate() {
 
     renderer.render( scene, camera );
 
-} 
+}
